@@ -1,5 +1,5 @@
 interface props {
-  useJsonFetch: (url: string, options?: RequestInit | undefined) => any;
+  useJsonFetch: (url: string, options?: RequestInit | undefined) => string[];
 }
 
 export default function SuccessfulData({ useJsonFetch }: props) {

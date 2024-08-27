@@ -1,9 +1,11 @@
 interface props {
-  useJsonFetch: (url: string, options?: RequestInit | undefined) => any;
+  useJsonFetch: (url: string, options?: RequestInit | undefined) => string[];
 }
 
 export default function LoadingIndikator({ useJsonFetch }: props) {
   const [data, loading, error] = useJsonFetch("http://localhost:7070/loading");
+
+  console.log(useJsonFetch("http://localhost:7070/loading"));
 
   return (
     <>
